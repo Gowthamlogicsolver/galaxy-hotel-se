@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" id="ic" href="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8SG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'booking.css' %}">
+    <title>Booking</title>
+  </head>
+  <body>
+    <div class="Title">
+      <h1>Galaxy Hotels</h1>
+      <h3>Saravanamapatty, Coimbatore &nbsp;&nbsp;&nbsp;&nbsp;Contact: 998877665423</h3>
+      <h3>Exotic Amenities &nbsp;&nbsp;&nbsp; Spa  &nbsp;&nbsp;&nbsp; Multi-Cuisine Restaurant  &nbsp;&nbsp;&nbsp;  Swimming Pool &nbsp;&nbsp;&nbsp;  Service Request</h3>
+    </div>
+    <div class="details">
+      <div class="date">
+          <h2>Dates</h2>
+          <div class="check-in">
+          <h4>Check in : </h4>
+          <input type="date" id="in" name="datein">
+          </div>
+          <div class="check-out">
+          <h4>Check out : </h4>
+          <input type="date" id="out" name="dateout">
+          </div>
+      </div>
+      <div class="room">
+        <h2>Guests</h2>
+        <div class="r">
+        <label for="Rooms">Rooms :</label>
+        <select name="number" id="count1">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        </div>
+        <div class="a">
+        <label for="Adults">Adults :</label>
+        <select name="number" id="count2">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        </div>
+        <div class="c">
+        <label for="Children">Children :</label>
+          <select name="number" id="count2">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        </div>
+      </div>
+    </div>
+    <div class="book">
+      <div class="deluxe-room">
+        <h3>Deluxe Room</h3>
+        <div class="dr">
+          <img src="https://cache.marriott.com/marriottassets/marriott/CJBMD/cjbmd-bedroom-8458-hor-clsc.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=512px:342px">
+          <div class="rates">
+            <div class="r1">
+              <h4>Price per night : </h4><h4>5900</h4>
+              <button type="submit"><a href="{% url 'paymentapp:pay' %}">Book now</a></button>
+            </div>
+            <div class="r2">
+              <h4>Price per day : </h4><h4>7000</h4>
+              <button type="submit"><a href="{% url 'paymentapp:pay' %}">Book now</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="premier-room">
+        <h3>Premier Room</h3>
+        <div class="pr">
+          <img src="https://cache.marriott.com/marriottassets/marriott/CJBMD/cjbmd-executive-suite-4803-hor-clsc.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=512px:342px">
+          <div class="rates">
+            <div class="r1">
+              <h4>Price per night : </h4><h4>7900</h4>
+              <button type="submit"><a href="{% url 'paymentapp:pay' %}">Book now</a></button>
+            </div>
+            <div class="r2">
+              <h4>Price per day : </h4><h4>9000</h4>
+              <button type="submit"><a href="{% url 'paymentapp:pay' %}">Book now</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="suite-room">
+        <h3>Suite Room</h3>
+        <div class="sr">
+          <img src="https://cache.marriott.com/marriottassets/marriott/CJBMD/cjbmd-suite-8462-ver-clsc.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=512px:342px">
+          <div class="rates">
+            <div class="r1">
+              <h4>Price per night : </h4><h4>10500</h4>
+              <button type="submit"><a href="{% url 'paymentapp:pay' %}">Book now</a></button>
+            </div>
+            <div class="r2">
+              <h4>Price per day : </h4><h4>12000</h4>
+              <button type="submit"><a href="{% url 'paymentapp:pay' %}">Book now</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Profile</title>
+        <style>
+            body{
+                background-color: black;
+                color: blue;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <center><h1>Profile :-)</h1></center>
+        <div class="con">
+            {% for data in dataset %}.
+            <p>username : {{ data.username }}</p><br/>
+            <p>email : {{ data.email }}</p><br/>
+            <hr/>
+            {% endfor %}
+        </div>
+        <form action="{% url 'landingapp:landing' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" name="logout"><a href="{% url 'landingapp:landing' %}">LOGOUT</a></button>
+        </form>
+    </body>
+
+</html>
+<style>
+    .con{
+        color:white;
+    }
+</style>
